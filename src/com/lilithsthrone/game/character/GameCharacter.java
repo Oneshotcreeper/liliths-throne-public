@@ -21845,7 +21845,9 @@ public abstract class GameCharacter implements XMLSaving {
 				return level;
 				
 			} else {
-				if(Main.getProperties().difficultyLevel == DifficultyLevel.HELL) {
+				if(Main.getProperties().difficultyLevel == DifficultyLevel.ELITE
+					|| Main.getProperties().difficultyLevel == DifficultyLevel.MASTER
+					|| Main.getProperties().difficultyLevel == DifficultyLevel.HELL) {
 					if(level < Main.game.getPlayer().getLevel() * 2) {
 						return Main.game.getPlayer().getLevel() * 2;
 					} else {
